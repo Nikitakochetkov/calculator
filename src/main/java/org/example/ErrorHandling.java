@@ -21,4 +21,19 @@ public class ErrorHandling {
     public static void handleDivisionByZero() {
         System.out.println("Error! Division by zero.");
     }
+
+    public static double calculate(double a, double b, char operator) {
+        switch (operator) {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            case '/':
+                return a / b;
+            default:
+                throw new IllegalArgumentException("Invalid operator");
+        }
+    }
 }
